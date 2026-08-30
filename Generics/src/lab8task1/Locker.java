@@ -1,4 +1,5 @@
 package lab8task1;
+package lab8task1;
 
 public class Locker<T>{
     private int lockerNumber;
