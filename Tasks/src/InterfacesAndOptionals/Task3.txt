@@ -1,0 +1,28 @@
+Problem Statement: Employee Project Assignment and Work Hours Tracking System
+
+You are required to design a system for tracking employee project assignments and recording their working hours.
+The system should utilize interfaces to represent distinct functionalities and a class to implement these interfaces,
+allowing employees to perform activities related to project assignments and tracking daily work hours.
+
+Interfaces:
+
+Define two interfaces: Assignable and Workable.
+
+The Assignable interface should declare a method assignProject(String projectName) that assigns an employee to a project and returns void.
+
+The Workable interface should declare a method logWorkHours(String date, double hours) that records work hours on a specific date and returns void.
+
+Employee Class:
+
+Create a class named Employee that implements both the Assignable and Workable interfaces.
+Include a private attribute:
+workHours: Map<String, List> - to store working hours with corresponding dates.
+
+Implement the assignProject(String projectName) method to print a message in the format "Employee assigned to project " followed by the project name.
+
+Implement the logWorkHours(String date, double hours) method to record work hours on a certain date and store them in the workHours property
+where the key is the date and the value is the hours worked.
+NOTE - (There can be multiple work hour entries for a single day)
+
+Implement a method called getTotalHours(String date) that returns a primitive double representing the total amount of hours worked
+on the given day, returning 0.0 if no entries exist for that date.

@@ -1,0 +1,36 @@
+Problem Statement: Activity Management System with Optional Handling
+
+You are required to design a system that models both physical and financial activities for
+individuals. The system should utilize interfaces to represent distinct functionalities and
+a class to implement these interfaces, allowing individuals to perform activities related to
+exercising and managing expenses.
+
+Interfaces:
+
+Define two interfaces: PhysicalActivity and FinancialActivity.
+ - The PhysicalActivity interface should declare a method exercise() that returns a String indicating
+the type of exercise.
+ - The FinancialActivity interface should declare a method manageExpense(String date, double amount)
+ that records a financial transaction and returns void.
+
+Individual Class:
+
+ - Create a class named Individual that implements both the PhysicalActivity and FinancialActivity interfaces.
+    Include private attributes:
+        name: String - to store the name of the individual.
+        expenses: HashMap<String, Double> - to store financial transactions with corresponding dates.
+
+ - Implement a constructor with one parameter Individual(String name) that initializes the name to the passed name value
+and expenses to a new HashMap.
+
+- Implement the exercise() method to return the string "Exercising".
+- Implement the manageExpense(String date, double amount) method to record financial transactions on a certain date
+and store them in the expenses property where key is date and value is amount of the transaction.
+  NOTE - (There can be multiple expenses for a single day)
+
+- Implement a method called getTotalExpense(String date) that returns an Optional<Double> representing the total amount of
+money spent on the given day.
+
+The objective of the system is to provide a comprehensive solution for individuals to manage both their physical activities
+and financial expenses effectively, allowing them to track their exercises and expenses efficiently. The implementation
+should handle potential null values gracefully using Java's Optional class.
