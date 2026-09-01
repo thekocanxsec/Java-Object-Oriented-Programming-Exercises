@@ -1,0 +1,42 @@
+
+Problem Statement: Smart Home Device Management System
+You are tasked with designing a smart home management system that handles various types of smart devices, such as smart lights and smart AC units.
+
+Interfaces and Abstract Classes:
+
+Create an interface named Controllable with a method getStatus(): String.
+
+Create an abstract class named SmartDevice that implements the Controllable interface.
+This abstract class should include common attributes: deviceId (String), powerConsumption (double), and isOn (boolean).
+Create a constructor that sets all these attributes in the exact listed order (deviceId, powerConsumption, isOn).
+Implement appropriate getter and setter methods for all attributes following the encapsulation principle.
+
+Concrete Classes:
+Implement two concrete classes extending SmartDevice:
+
+SmartLight:
+
+Attributes: brightness (int) and color (String).
+
+Constructor order: deviceId (String), powerConsumption (double), isOn (boolean), brightness (int), color (String).
+
+Override getStatus() to return "SmartLight - Status: " + (isOn ? "ON" : "OFF").
+
+SmartAC:
+
+Attributes: temperature (double) and mode (String).
+Constructor order: deviceId (String), powerConsumption (double), isOn (boolean), temperature (double), mode (String).
+Override getStatus() to return "SmartAC - Status: " + (isOn ? "ON" : "OFF").
+
+SmartHomeHub Class:
+
+Implement a class named SmartHomeHub with a method optimizeEnergy(List<SmartDevice> devices): List<SmartDevice>.
+
+Inside this method, iterate through the list of devices and apply the following downcasting logic:
+
+If the device is a SmartLight, check if its brightness is greater than 80. If it is, reduce the brightness to 50,
+and change its color to "Warm White". Also, turn it isOn if it was off.
+
+If the device is a SmartAC, check if its temperature is below 20.0. If it is, set the temperature to 22.0, and change its mode to "Eco".
+
+Return the updated List<SmartDevice>.

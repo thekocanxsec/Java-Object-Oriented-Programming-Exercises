@@ -1,0 +1,39 @@
+Problem Statement: Inventory Management System
+
+You are tasked with designing an inventory management system for a warehouse. The system should
+allow for the management of different types of products, including electronics and clothing items.
+
+Interfaces and Abstract Classes:
+
+- Define an interface named Product with a method displayDetails(): String.
+- Create an abstract class named InventoryItem that implements the Product interface.
+This abstract class should include common attributes and methods shared among inventory
+items: productName: String, price: double, quantity: int. Create the constructor
+that sets all the previously mentioned attributes in order in which they are listed.
+Create a get and set methods for all the attributes and follow the encapsulation principle.
+
+Concrete Classes:
+
+Implement concrete classes for different types of products, including ElectronicsProduct and
+ClothingProduct,  both extending the InventoryItem abstract class. Override the displayDetails()
+method and return "ElectronicsProduct" for the ElectronicsProduct class and "ClothingProduct"
+for the ClothingProduct class.
+
+- The ElectronicsProduct should have one attribute: brand: String and you should provide a constructor
+to set all the values in following order: String productName, double price, int quantity, String brand.
+This class should also follow the encapsulation principle.
+
+- The ClothingProduct should have one attribute: size: String and you should provide a constructor
+to set all the values in following order: String productName, double price, int quantity, String size.
+This class should also follow the encapsulation principle.
+
+InventoryManager Class:
+
+ - Implement a class named InventoryManager with a method updateInventory(List<InventoryItem> items): List<InventoryItem>
+ - Inside this method, iterate through the list of items and adjust their properties. For ElectronicsProduct,
+ update its price, so it has 10% discount (multiply the price by 0.9). For ClothingProduct, update its price,
+ so it has 20% discount (multiply the price by 0.8) and return the updated List<InventoryItem> of items.
+ - Ensure proper downcasting where necessary to access and modify specific attributes of each item.
+
+The goal of the system is to provide a robust solution for managing inventory efficiently, allowing for the addition,
+modification, and retrieval of product details with ease.

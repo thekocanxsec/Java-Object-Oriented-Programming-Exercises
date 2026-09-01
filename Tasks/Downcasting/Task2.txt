@@ -1,0 +1,20 @@
+Overview: Build a Java application to model and manage geometrical shapes utilizing an interface, an abstract base class, and concrete implementations.
+
+Components Required:
+
+Drawable Interface: Declare an interface called Drawable containing a method draw() that returns void.
+
+Shape Abstract Class: Implement an abstract class named Shape that adheres to the Drawable interface.
+
+Circle Concrete Class: Extend Shape, include a private attribute radius of type double along with its
+getters and setters, and override draw() to print "Drawing Circle".
+
+Square Concrete Class: Extend Shape, include a private attribute sidelength of type double along with its getters and setters,
+and override draw() to print "Drawing Square".
+
+    ShapeManager Class:
+
+Create a class named ShapeManager featuring a method drawAll(List<Drawable> shapes) which returns a List<Drawable>.
+
+Iterate through the shape elements inside this method. Use downcasting to check types and modify individual
+properties: update the radius of any Circle object to 15 and the side length of any Square object to 5, then return the updated list.
