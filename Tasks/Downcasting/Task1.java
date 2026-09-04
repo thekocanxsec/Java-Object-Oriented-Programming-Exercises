@@ -54,6 +54,14 @@ class ElectronicsProduct extends InventoryItem{
         this.brand = brand;
     }
 
+    public void setBrand(String brand){
+        this.brand = brand;
+    }
+
+    public String getBrand(){
+        return this.brand;
+    }
+
 
     @Override
     public String displayDetails(){
@@ -71,6 +79,14 @@ class ClothingProduct extends InventoryItem{
         this.size = size;
     }
 
+    public String getSize(){
+        return this.size;
+    }
+    
+    public void setSize(String size){
+        this.size = size;
+    }
+    
     @Override
     public String displayDetails(){
         return "ClothingProduct";
@@ -95,7 +111,7 @@ class InventoryManager{
 }
 
 class MainRun{
-    static void main(String[] args) {
+    public static void main(String[] args) {
         List<InventoryItem> items = new ArrayList<>();
         items.add(new ElectronicsProduct("Laptop", 1000.0, 5, "Dell"));
         items.add(new ClothingProduct("T-Shirt", 50.0, 20, "M"));
