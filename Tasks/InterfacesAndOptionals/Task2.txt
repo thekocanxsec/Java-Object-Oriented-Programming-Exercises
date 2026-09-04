@@ -1,0 +1,30 @@
+Problem Statement: Student Enrollment and Payment System with Optional Handling
+
+You are required to design a system for tracking student enrollment in a course and recording their payments.
+The system should utilize interfaces to represent distinct functionalities and a class to implement these interfaces,
+allowing students to perform activities related to course enrollment and managing course payments.
+
+Interfaces:
+
+Define two interfaces: Enrollable and Payment.
+
+The Enrollable interface should declare a method enroll() that returns void,
+which signifies that a class implementing this interface can be enrolled in a course.
+
+The Payment interface should declare a method makePayment(String date, double amount) that records a payment transaction and returns void.
+
+Student Class:
+
+Create a class named Student that implements both the Enrollable and Payment interfaces.
+Include private attributes:
+name: String - to store the name of the student.
+payments: HashMap<String, Double> - to store financial payments with corresponding dates.
+
+Implement a constructor with one parameter Student(String name) that initializes the name to the passed name value and payments to a new HashMap.
+
+Implement the enroll() method to print the string "Enrolled in a course".
+
+Implement the makePayment(String date, double amount) method to record financial payments on a certain date and store them in the payments property where key is date and value is amount of the payment.
+NOTE - (There can be multiple payments for a single day)
+
+Implement a method called getPayment(String date) that returns an Optional representing the total amount of money paid on the given day.
