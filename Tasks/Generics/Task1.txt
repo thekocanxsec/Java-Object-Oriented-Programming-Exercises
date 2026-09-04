@@ -1,0 +1,32 @@
+Problem Statement: Employee Hierarchy and Filtering System
+
+You are tasked with designing a system to manage employees within an organization.
+The system should include a hierarchy of employees represented by different
+classes and provide functionality to filter and retrieve information about employees.
+
+Employee Hierarchy:
+
+- Define an enum Gender with values MALE and FEMALE.
+- Create a base class Person with attributes:
+    - String firstName to store the first name of the person.
+    - int age to store the age of the person.
+    - Gender gender to store the gender of the person.
+- Implement a constructor in the Person class (String firstName, int age, Gender gender)
+  to initialize all the attributes in the following order.
+- Implement getter and setter methods for each attribute.
+
+Derived Classes:
+
+- Create two derived classes, Assistant and Professor, inheriting from the Person class.
+- Implement constructors in both derived classes to initialize the attributes using
+the constructor of the base class.
+
+Company Class:
+
+- Implement a generic class Company<T extends Person> to manage a list of employees.
+- This class will have one attribute called employees: List<T>
+- Implement a constructor that sets the List<T>
+- Provide methods to:
+    - Getter and setter for the employees attribute
+    - Method called filterByGender(Gender gender) that filters the list of employees by gender parameter and that returns Optional<List<T>>
+    - Method called getByFirstName(String firstName) that retrieves an employee by their first name and return an Optional<T>.
